@@ -1,0 +1,133 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta charset="UTF-8">
+  <title>Launching Soon</title>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all">
+  <style type="text/css">
+    :root {
+      --bg-color: #F9FAFB;
+      --text-color: #1F2937;
+      --accent-color: #7C3AED;
+      --overlay-gradient: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+    }
+    [data-theme="dark"] {
+      --bg-color: #1A1A1A;
+      --text-color: #E0E0E0;
+      --accent-color: #7C3AED;
+      --overlay-gradient: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.25) 0%, transparent 70%);
+    }
+    html, body {
+      background: var(--bg-color) !important;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 16px;
+      color: var(--text-color);
+      position: relative;
+      overflow: hidden;
+    }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--overlay-gradient);
+      z-index: 1;
+      animation: radialPulse 12s ease-in-out infinite;
+      will-change: transform;
+    }
+    .container {
+      text-align: center;
+      padding: 2vw;
+      max-width: 700px;
+      z-index: 2;
+      animation: fadeIn 0.7s ease-out;
+      will-change: opacity, transform;
+    }
+    #message h1 {
+      margin: 1.5rem 0;
+      font-size: 3.5rem;
+      font-weight: 800;
+      opacity: 0;
+      transform: translateY(20px) rotate(-1deg);
+      animation: textReveal 0.9s ease-out 0.2s forwards;
+      will-change: opacity, transform;
+      transition: text-shadow 0.3s ease;
+    }
+    #message h1:hover {
+      text-shadow: 0 0 8px rgba(124, 58, 237, 0.5);
+    }
+    #message p {
+      margin: 1rem 0;
+      font-size: 1.3rem;
+      line-height: 1.7;
+      opacity: 0;
+      transform: translateY(20px) rotate(-1deg);
+      animation: textReveal 0.9s ease-out 0.5s forwards;
+      will-change: opacity, transform;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes textReveal {
+      to { opacity: 1; transform: translateY(0) rotate(0); }
+    }
+    @keyframes radialPulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.05); opacity: 1; }
+    }
+    @media (min-width: 1024px) {
+      .container { padding: 3rem; }
+      #message h1 { font-size: 3.5rem; }
+      #message p { font-size: 1.3rem; }
+    }
+    @media (max-width: 768px) {
+      .container { max-width: 90%; padding: 1.5rem; }
+      #message h1 { font-size: 2.5rem; }
+      #message p { font-size: 1.1rem; }
+    }
+    @media (max-width: 480px) {
+      html, body { font-size: 14px; }
+      #message h1 { font-size: 1.8rem; }
+      #message p { font-size: 0.95rem; }
+    }
+    @media (max-width: 320px) {
+      #message h1 { font-size: 1.5rem; }
+      #message p { font-size: 0.9rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .container, #message h1, #message p, body::before { animation: none; }
+      #message h1:hover { text-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span id="message">
+      <h1>Launching Soon...</h1>
+      <p>Get ready for our new mobile, Windows, and web applications. Stay tuned for the release!</p>
+    </span>
+  </div>
+  <script>
+    function updateDarkMode() {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    }
+    updateDarkMode();
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateDarkMode);
+    }
+  </script>
+</body>
+</html>

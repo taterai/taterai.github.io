@@ -1,0 +1,39 @@
+# Allow all search engines full access to index the site
+User-agent: *
+Allow: /
+
+# Disallow access to duplicate or private areas
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /temp/
+Disallow: /test/
+Disallow: /drafts/
+
+# Prevent indexing of query-based URLs to avoid duplicate content
+Disallow: /*?*
+
+# Optional: Limit server overload from aggressive crawlers
+# Crawl-delay: 5
+
+# Allow Googlebot access to all content and images
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Sitemap to help bots discover important pages fast
+Sitemap: https://taterai.github.io/sitemap.xml
+
+# Optional: Block unwanted bots known for scraping (aggressive)
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

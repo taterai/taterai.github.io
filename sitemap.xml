@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://taterai.github.io/</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Image Generator -->
+  <url>
+    <loc>https://taterai.github.io/Text-to-Image-Generator.html</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Background Remover -->
+  <url>
+    <loc>https://taterai.github.io/Background-Remover.html</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Ai Chat Bot -->
+  <url>
+    <loc>https://taterai.github.io/Ai-Chat-bot.html</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- QR Code Generator -->
+  <url>
+    <loc>https://taterai.github.io/Qr.html</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Download -->
+  <url>
+    <loc>https://taterai.github.io/Download.html</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+    <!-- Pricing -->
+  <url>
+    <loc>https://taterai.github.io/Pricing.html</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+    <!-- Support / Contact Page -->
+  <url>
+    <loc>https://taterai.github.io/Support.html</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+</urlset>
