@@ -27,8 +27,7 @@ Allow: /
 
 # Sitemap to help bots discover important pages fast
 Sitemap: https://taterai.github.io/sitemap.xml
-Sitemap: https://taterai.github.io/sitemap.txt
-
+Sitemap: https://taterai.github.io/sitemap.xml.txt
 # Optional: Block unwanted bots known for scraping (aggressive)
 User-agent: MJ12bot
 Disallow: /
